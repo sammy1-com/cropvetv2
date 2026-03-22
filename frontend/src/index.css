@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --forest: #2D6A4F;
+    --forest-light: #52B788;
+    --earth: #A0522D;
+    --earth-light: #C47A45;
+    --cream: #F8F9F0;
+    --charcoal: #1A1A1A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    @apply bg-cream text-charcoal font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { @apply font-display; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-forest text-white font-body font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-forest-dark transition-all duration-200 shadow-card hover:shadow-hover
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-earth {
+    @apply bg-earth text-white font-body font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-earth-dark transition-all duration-200
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply border-2 border-forest text-forest font-body font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-forest hover:text-white transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card p-5 border border-cream-dark;
+  }
+
+  .input {
+    @apply w-full border border-gray-200 rounded-xl px-4 py-2.5 font-body text-sm
+           focus:outline-none focus:ring-2 focus:ring-forest/40 focus:border-forest
+           bg-white transition-all placeholder:text-gray-400;
+  }
+
+  .badge-urgent  { @apply inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-red-100 text-red-700; }
+  .badge-high    { @apply inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-orange-100 text-orange-700; }
+  .badge-medium  { @apply inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-700; }
+  .badge-low     { @apply inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-green-100 text-green-700; }
+  .badge-healthy { @apply inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-cream; }
+::-webkit-scrollbar-thumb { @apply bg-forest/30 rounded-full; }
+
+/* Fade in animation */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fadeIn 0.3s ease forwards; }
