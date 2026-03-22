@@ -53,7 +53,7 @@ export default function Landing() {
 
       {/* Footer */}
       <footer className="text-center py-8 text-sm text-gray-400 font-body">
-        Built for Kenyan smallholder farmers · CropVet 2024
+        Built for Kenyan smallholder farmers · CropVet 2026
       </footer>
     </div>
   )
