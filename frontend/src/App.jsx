@@ -39,6 +39,7 @@ export default function App() {
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/map"         element={<MapView />} />
         <Route path="/settings"    element={<Settings />} />
+        
       </Route>
     </Routes>
   )
