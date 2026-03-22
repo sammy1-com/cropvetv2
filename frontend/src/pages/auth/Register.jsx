@@ -28,7 +28,7 @@ export default function Register() {
             <Leaf size={22} className="text-white" />
           </div>
           <h1 className="font-display text-2xl text-charcoal">Create your farm</h1>
-          <p className="text-sm text-gray-500 mt-1">Free forever. No credit card needed.</p>
+          <p className="text-sm text-gray-500 mt-1">Join thousands of Kenyan farmers using AI.</p>
         </div>
 
         <form onSubmit={handle} className="card space-y-4">
