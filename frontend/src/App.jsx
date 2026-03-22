@@ -2,7 +2,6 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './hooks/useAuth'
 import Layout from './components/Layout'
 import ProtectedRoute from './components/ProtectedRoute'
-import MapView from './pages/MapView'
 
 import Landing      from './pages/Landing'
 import Login        from './pages/auth/Login'
@@ -14,6 +13,7 @@ import CropMind     from './pages/CropMind'
 import Assistant    from './pages/Assistant'
 import Timeline     from './pages/Timeline'
 import Marketplace  from './pages/Marketplace'
+import MapView      from './pages/MapView'
 import Settings     from './pages/Settings'
 
 export default function App() {
@@ -37,8 +37,8 @@ export default function App() {
         <Route path="/assistant"   element={<Assistant />} />
         <Route path="/timeline"    element={<Timeline />} />
         <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/map"         element={<MapView />} />
         <Route path="/settings"    element={<Settings />} />
-        <Route path="/map" element={<MapView />} />
       </Route>
     </Routes>
   )
