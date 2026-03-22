@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import {
   LayoutDashboard, Microscope, Brain, MessageSquare,
-  CalendarDays, ShoppingBag, Settings, LogOut, Menu, X, Leaf
+  CalendarDays, ShoppingBag, Settings, LogOut, Menu, X, Leaf, Map
 } from 'lucide-react'
 
 const nav = [
@@ -14,6 +14,7 @@ const nav = [
   { to: '/timeline',    icon: CalendarDays,     label: 'Timeline' },
   { to: '/marketplace', icon: ShoppingBag,      label: 'Marketplace' },
   { to: '/settings',    icon: Settings,         label: 'Settings' },
+  { to: '/map',          icon: Map, label: 'Farm Map' },
 ]
 
 export default function Layout() {

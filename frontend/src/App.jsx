@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './hooks/useAuth'
 import Layout from './components/Layout'
 import ProtectedRoute from './components/ProtectedRoute'
+import MapView from './pages/MapView'
 
 import Landing      from './pages/Landing'
 import Login        from './pages/auth/Login'
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/timeline"    element={<Timeline />} />
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/settings"    element={<Settings />} />
+        <Route path="/map" element={<MapView />} />
       </Route>
     </Routes>
   )
