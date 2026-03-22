@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import {
   LayoutDashboard, Microscope, Brain, MessageSquare,
-  CalendarDays, ShoppingBag, Settings, LogOut, Menu, X, Leaf, Map
+  CalendarDays, ShoppingBag, Settings, LogOut, Menu, X, Leaf
 } from 'lucide-react'
 
 const nav = [
@@ -14,7 +14,6 @@ const nav = [
   { to: '/timeline',    icon: CalendarDays,     label: 'Timeline' },
   { to: '/marketplace', icon: ShoppingBag,      label: 'Marketplace' },
   { to: '/settings',    icon: Settings,         label: 'Settings' },
-  { to: '/map',          icon: Map, label: 'Farm Map' },
 ]
 
 export default function Layout() {
@@ -32,7 +31,7 @@ export default function Layout() {
           <div className="w-8 h-8 rounded-lg bg-earth flex items-center justify-center">
             <Leaf size={16} className="text-white" />
           </div>
-          <span className="font-display text-lg text-white">CropVet</span>
+          <span className="font-display text-lg text-white">CropVet<span className="text-forest-light">AI</span></span>
         </div>
         <p className="text-xs text-forest-light mt-1 font-body">The Farm's Own AI Brain</p>
       </div>
@@ -89,7 +88,7 @@ export default function Layout() {
             <div className="w-6 h-6 rounded bg-earth flex items-center justify-center">
               <Leaf size={12} className="text-white" />
             </div>
-            <span className="font-display text-base">CropVet</span>
+            <span className="font-display text-base text-white">CropVet<span className="text-forest-light">AI</span></span>
           </div>
           <button onClick={() => setOpen(true)} className="p-1">
             <Menu size={22} />

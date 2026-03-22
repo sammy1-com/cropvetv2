@@ -1,21 +1,34 @@
 import { useNavigate } from 'react-router-dom'
-import { Leaf, Brain, Microscope, MessageSquare, ShieldCheck, Zap } from 'lucide-react'
+import { Leaf, Brain, Microscope, MessageSquare } from 'lucide-react'
 
 export default function Landing() {
   const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-cream font-body">
       {/* Nav */}
-      <nav className="flex items-center justify-between px-6 py-4 max-w-5xl mx-auto">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-earth flex items-center justify-center">
+      <nav className="flex items-center justify-between px-4 md:px-6 py-4 max-w-5xl mx-auto">
+        {/* Logo */}
+        <div className="flex items-center gap-2 shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-earth flex items-center justify-center shrink-0">
             <Leaf size={16} className="text-white" />
           </div>
-          <span className="font-display text-xl text-charcoal">CropVet</span>
+          <span className="font-display text-xl text-charcoal">
+            CropVet<span className="text-forest-light">AI</span>
+          </span>
         </div>
-        <div className="flex gap-3">
-          <button onClick={() => navigate('/login')} className="btn-outline text-sm py-2 px-4">Sign In</button>
-          <button onClick={() => navigate('/register')} className="btn-earth text-sm py-2 px-4">Get Started</button>
+
+        {/* Buttons — stack on very small screens, row on sm+ */}
+        <div className="flex items-center gap-2 ml-4">
+          <button
+            onClick={() => navigate('/login')}
+            className="btn-outline text-sm py-2 px-3 md:px-4 whitespace-nowrap">
+            Sign In
+          </button>
+          <button
+            onClick={() => navigate('/register')}
+            className="btn-earth text-sm py-2 px-3 md:px-4 whitespace-nowrap">
+            Get Started
+          </button>
         </div>
       </nav>
 
@@ -53,7 +66,7 @@ export default function Landing() {
 
       {/* Footer */}
       <footer className="text-center py-8 text-sm text-gray-400 font-body">
-        Built for Kenyan smallholder farmers · CropVet 2026
+        Built for Kenyan smallholder farmers · CropVetAI 2026
       </footer>
     </div>
   )
